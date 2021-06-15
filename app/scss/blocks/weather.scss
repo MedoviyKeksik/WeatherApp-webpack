@@ -1,0 +1,91 @@
+.weather {
+    &__current-location {
+        @include setFont(44px, 700);
+
+        margin-top: 57px;
+        margin-bottom: 0;
+
+        text-transform: uppercase;
+    }
+
+    &__current-time {
+        @include setFont(24px, 600);
+
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+
+    &__today {
+        position: relative;
+
+        width: 720px;
+
+        @media screen and (max-width: 900px) {
+            display: flex;
+
+            width: 100%;
+
+            flex-wrap: wrap;
+        }
+    }
+
+    &__degrees_today {
+        font-size: 306px !important;
+        font-weight: 700 !important;
+
+        margin-top: -5px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 900px) {
+            font-size: 100px !important;
+        }
+    }
+
+    &__icon_today {
+        font-size: 8em !important;
+
+        position: absolute;
+        @media screen and (max-width: 900px) {
+            position: static;
+        }
+    }
+
+    &__info {
+        @include setFont(22px, 700, 37px);
+
+        position: absolute;
+        top: 160px;
+        left: 500px;
+
+        display: flex;
+        flex-direction: column;
+
+        text-transform: uppercase;
+
+        flex-wrap: wrap;
+        @media screen and (max-width: 900px) {
+            position: static;
+        }
+    }
+
+    &__days {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__day-title {
+        @include setFont(22px, 700);
+
+        margin-bottom: 0;
+
+        text-transform: uppercase;
+    }
+
+    &__degrees {
+        @include setFont(80px, 600);
+
+        margin-top: 4px;
+    }
+}

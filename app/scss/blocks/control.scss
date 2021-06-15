@@ -1,0 +1,176 @@
+.control {
+    display: flex;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+        justify-content: flex-start;
+    }
+
+    &__refresh {
+        width: 44px;
+        height: 44px;
+
+        transition: color .3s ease-in-out;
+
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        background-image: url('../images/refresh-background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 44px 44px;
+        
+        &:hover {
+            cursor: pointer;
+
+            color: gray;
+        }
+    }
+
+    &__dropdown-content {
+        position: absolute;
+        display: none;
+    }
+
+    &__dropdown-item {
+        display: block;
+    
+        width: 71px;
+        height: 44px;
+        margin-left: 10px;
+    
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        background-color: $control-background-color;
+    }
+
+    &__language {
+        width: 71px;
+        height: 44px;
+        margin-left: 10px;
+    
+        text-transform: uppercase;
+    
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        background-color: $control-background-color-active;
+    }
+    
+    &__dropdown {
+        display: relative;
+
+        &:hover .control__dropdown-content {
+            display: block;
+        }
+    }
+    
+    &__units {
+        display: flex;
+    }
+
+    &__units-item {
+        @include setFont(14px, 700);
+
+        display: block;
+
+        width: 44px;
+        height: 44px;
+        
+        transition: background-color .3s ease-in-out;
+
+        color: $text-color;
+        border: none;
+        background-color: $control-background-color;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &[current] {
+            background-color: $control-background-color-active;
+        }
+
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+        
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+    &__fahrenheit-units {
+        border-radius: 0 5px 5px 0;
+        margin-left: 10px;
+    }
+
+
+    &__search {
+        display: flex;
+
+        margin-left: auto;
+
+        @media screen and (max-width: 630px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__input-city {
+        display: block;
+
+        box-sizing: border-box;
+        width: 230px;
+        height: 44px;
+        margin-left: auto;
+        padding-left: 1em;
+
+        color: $text-color;
+        border: 1px solid $control-background-color-active;
+        border-right: none;
+        border-radius: 5px 0 0 5px;
+        background-color: $control-background-color;
+        
+        @media screen and (max-width: 400px) {
+            width: 100px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__voice-input {
+        display: block;
+
+        box-sizing: border-box;
+        width: 44px;
+        height: 44px;
+
+        color:  $control-background-color-active;
+        border: 1px solid $control-background-color-active;
+        border-left: none;
+        background-color: $control-background-color;
+    }
+
+    &__search-button {
+        @include setFont(14ox, 700);
+
+        display: block;
+
+        width: 101px;
+        height: 44px;
+
+        text-transform: uppercase;
+
+        color: $text-color;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        background-color: $control-background-color-active;
+    }
+}

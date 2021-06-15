@@ -1,0 +1,28 @@
+
+.page {
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 40px 90px;
+
+    transition: background-image 1s ease-in-out;
+
+    color: $text-color;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    text-shadow: 0 0 10px #333;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    @media screen and (max-width: 800px) {
+        padding: 10px;
+    }    
+}
